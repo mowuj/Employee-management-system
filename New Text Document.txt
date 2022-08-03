@@ -1,0 +1,33 @@
+odrey3393@gmail.com
+
+password:Atiar1258
+
+* online attendence
+* permission
+* selary
+* post
+* admin panel
+*pic render in base.html
+approve leave with date
+*qualification
+post
+nid
+
+****************
+username
+department
+employee_id
+district
+post
+full_name
+ssc
+hsc
+honors
+masters
+email
+selary
+image
+phone
+father_name
+mother_name
+nid

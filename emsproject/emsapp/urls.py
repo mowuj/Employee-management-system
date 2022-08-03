@@ -1,0 +1,33 @@
+from django.urls import path
+from .views import *
+urlpatterns = [
+    path('',user_login,name='user-login'),
+    path('user-logout',user_logout,name='user-logout'),
+    path('home',home,name='home'),
+    path('all-employee',all_employee,name='all-employee'),
+    path('leave-form',leave_form,name='leave-form'),
+    path('holiday',holiday,name='holiday'),
+    path('details/<int:id>',details ,name='detials'),
+    path('client_details/<int:id>', client_details, name='client_details'),
+    path('new-application/',new_application,name='new-application'),
+    path('my-application/',my_application,name='my-application'),
+    path('process-application/<int:id>/<int:sts>',process_application,name='process-application'),
+    path('daily-task',daily_task,name='daily-task'),
+    path('move-task/<int:id>/<sts>',move_task,name='move-task'),
+    path('add-task',add_task,name='add-task'),
+    path('add-employee',add_employee,name='add-employee'),
+    path('create-user',create_user,name='create-user'),
+    path('profile',profile,name='profile'),
+    path('abc',abc,name='abc'),
+    path('edit-employee/<int:id>',edit_employee,name='edit-employee'),
+    path('edit-profile',edit_profile,name='edit-profile'),
+    path('profile-detail',profile_detail,name='profile-detail'),
+    path('delete/<int:id>',delete, name = "delete"),
+    path('client_delete/<int:id>', client_delete, name="client_delete"),
+    path('create-meeting',create_meeting, name = "create-meeting"),
+    path('meeting',meeting, name = "meeting"),
+    # path('attendence', attendence, name="attendence"),
+    path('create_client', create_client, name="create_client"),
+    path('client', client, name="client"),
+    
+]

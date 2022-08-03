@@ -1,0 +1,16 @@
+* Login
+*logout
+*trello
+*Profile
+*Edit Profile by user
+*Details
+*Edit details by admin
+* Create User
+* Create Employee
+*Search
+*Leave manegement
+* online attendence
+*Absent count
+*Permission
+* selary
+*Notice

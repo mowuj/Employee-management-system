@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block home %}
+home
+{% endblock home %}
+{% block body %}
+<style>
+  a:hover{
+      text-decoration: None;
+  }
+  a{
+      color:black;
+  }
+</style>
+<div class="container">
+  <div class="row d-flex justify-content-center mt-3 ">
+    <div class="col-md-6  bg-secondary text-center badge-pill p-2 text-light">
+      <h2> Admin Dashboard </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card mr-2 ml-2 mb-3 mt-3  bg-info" style="width: 14rem;">
+      <a href="{% url 'all-employee' %}">
+      <div class="card-body">
+        
+        <h5 class="card-title">Total Employee</h5>
+          <p class="card-text">{{total}}</p>
+
+      </div>
+    </a>
+    </div>
+  
+    <div class="card mr-3 ml-3 mb-3 mt-3  bg-info" style="width: 14rem;">
+      <a href="{% url 'new-application' %}">
+      <div class="card-body">
+        <h5 class="card-title">Today Application</h5>
+        <p class="card-text">{{l_app}}</p>
+        
+      </div>
+    </a>
+    </div>
+    <div class="card mr-3 ml-3 mb-3 mt-3  bg-info" style="width: 14rem;">
+      <a href="{% url 'new-application' %}">
+      <div class="card-body">
+        <h5 class="card-title">Today Leave</h5>
+        <p class="card-text">{{leave}}</p>
+
+      </div>
+    </a>
+    </div>
+    <div class="card mr-3 ml-3 mb-3 mt-3  bg-info" style="width: 14rem;">
+      <a href="{% url 'meeting' %}">
+      <div class="card-body">
+        <h5 class="card-title">Today Meeting</h5>
+        <p class="card-text">{{meet}}</p>
+
+      </div>
+    
+    </a>
+    </div>
+    
+    
+    
+  </div>
+</div>
+
+
+
+
+{%endblock body%}

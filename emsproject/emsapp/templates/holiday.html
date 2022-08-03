@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Holiday</title>
+{% endblock title %}
+{% block body %}
+    <div class="container">
+      <div class="row d-flex justify-content-center mt-3">
+        <div class="col-md-6 mt-2 mb-3 ">
+          <h4 class="bg-secondary text-center text-light badge-pill p-3">Govt Holiday</h4>
+        </div>
+      </div>
+        <div class="col-md-10 m-auto">
+            
+            
+    {% if holiday %}
+    <table class="table table-bordered mt-5">
+        <thead>
+            
+          <tr class=" table-secondary">
+            <th scope="col">#</th>
+
+            
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Description of Holiday</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+          <tr  >
+              {% for i in holiday %}
+            <th scope="row">{{forloop.counter}}</th>
+           
+            <td>{{i.start_date}}</td>
+            <td>{{i.end_date |default:'-'}}</td>
+            <td>{{i.Description}}</td>
+            
+          </tr>
+          {% endfor %}
+
+        
+        </tbody>
+      </table>
+      {% else %}
+      <h4 class="text-muted text-center">No Holiday!</h4>
+      {% endif %}
+        </div>
+    </div>
+{% endblock body %}
+
